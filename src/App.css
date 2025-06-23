@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+*::-webkit-scrollbar {
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 7px;
+  height: 7px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #4526df;
+  border-radius: 5px;
+  border: solid 1px #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingElement {
+  width: 60px !important;
+  height: 60px !important;
+  border: 6px solid #e0e0e0;
+  border-top: 6px solid #4526df;
+  border-left: 6px solid #4526df;
+  border-right: 6px solid #4526df;
+  border-radius: 50%;
+  animation: load 1s linear infinite;
+}
+
+.app {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #674ee6;
+  height: 100vh;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 23px;
+}
+p {
+  font-size: 18px;
+}
+
+input::placeholder {
+  color: #eee;
+}
+
+@media (max-width: 700px) {
+  .app {
+    padding: 10px !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .signin {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  h1 {
+    font-size: 21px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .signin > div:first-child {
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px !important;
+  }
+}
+
+.AdminPanel {
+  grid-template-columns: auto auto;
+}
+@media (max-width: 950px) {
+  .AdminPanel {
+    grid-template-columns: auto;
+  }
+}
+
+dialog {
+  border-color: transparent;
+  outline: none;
+}
+dialog div {
+  transform: translate(0px, 230px);
+}
